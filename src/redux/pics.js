@@ -2,6 +2,7 @@ import Axios from "axios";
 
 const SET_PICS = 'SET_PICS';
 const apiKey = 'XkLxnoj1vglMVZed66K6qLvvR2scRzxrIcGgt4Fl';
+//let date = '1996-06-21';
 
 export const setPics = (pics) => ({
   type: SET_PICS,
@@ -9,9 +10,9 @@ export const setPics = (pics) => ({
 });
 
 
-export const fetchPics = () => async (dispatch) => {
+export const fetchPics = (date) => async (dispatch) => {
   try{
-    const {data} = await Axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=1995-06-16`);
+    const {data} = await Axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`);
     dispatch(setPics(data));
   }catch(error){
     console.log(error); 

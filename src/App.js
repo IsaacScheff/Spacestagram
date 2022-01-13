@@ -19,7 +19,10 @@ function App() {
   return (
     <div className="App">
       <header> Earth Pics</header>
-      <SinglePic />
+      <SinglePic date='1996-06-21'/>
+      <SinglePic date='1995-08-22'/>
+      <SinglePic date='2004-01-11'/>
+      <SinglePic date='2014-12-25'/>
     </div>
   );
 }
