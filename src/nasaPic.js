@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 export function SinglePic (props) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
+    const [isLiked, setLikeStatus] = useState(0);
+    //let liked = false;
+    //const likeColor = liked ? "grey" : "lightgrey";
     const [pic, setPic] = useState([]);
     const apiKey = 'XkLxnoj1vglMVZed66K6qLvvR2scRzxrIcGgt4Fl';
   
@@ -27,12 +30,14 @@ export function SinglePic (props) {
       return <div>Loading...</div>;
     } else {
         console.log(pic);
+        let buttonText = isLiked ? 'Unlike' : 'Like';
       return (
         <div>
             <p>{pic.title}</p>
             <img src={pic.hdurl}/>
             <p>Taken on Earth Date: {pic.date}</p>
             <p>{pic.explanation}</p> 
+            <button className="likeButton" onClick={() => setLikeStatus(!isLiked)}> {buttonText} </button>
         </div>
       );
     }
