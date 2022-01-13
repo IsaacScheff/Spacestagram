@@ -4,8 +4,6 @@ export function SinglePic (props) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [isLiked, setLikeStatus] = useState(0);
-    //let liked = false;
-    //const likeColor = liked ? "grey" : "lightgrey";
     const [pic, setPic] = useState([]);
     const apiKey = 'XkLxnoj1vglMVZed66K6qLvvR2scRzxrIcGgt4Fl';
   
@@ -32,47 +30,19 @@ export function SinglePic (props) {
         console.log(pic);
         let buttonText = isLiked ? 'Unlike' : 'Like';
       return (
-        <div>
-            <p>{pic.title}</p>
-            <img src={pic.hdurl}/>
-            <p>Taken on Earth Date: {pic.date}</p>
-            <p>{pic.explanation}</p> 
+        <figure>
+            <figcaption>{pic.title}</figcaption>
+            <p><time>Taken on: {pic.date}</time></p>
+            <img src={pic.url} alt='Image detailed below'/>
+            <details>
+                <summary>Click here for information</summary>
+                {pic.explanation}
+            </details> 
             <button className="likeButton" onClick={() => setLikeStatus(!isLiked)}> {buttonText} </button>
-        </div>
+        </figure>
       );
     }
   }
    
 
 export default SinglePic;
-
-// import React, { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchPics } from "./redux/pics";
-// import {  useParams  } from "react-router-dom";
-
-// export function SinglePic (props) {
-    
-//     const dispatch = useDispatch();
-//     const pic = useSelector((state) => state.pics);
-
-//     //let { worldId } = useParams();
-//     console.log(props.date);
-//     useEffect(()=>{
-//         dispatch(fetchPics(props.date))
-//     }, [])
-//     //console.log(pic);
-//     return(
-//         <div>
-//             <p>{pic.title}</p>
-//             <img src={pic.hdurl}/>
-//             <p>Taken on Earth Date: {pic.date}</p>
-//             <p>{pic.explanation}</p> 
-            
-//             {/*like button?*/}
-//         </div>
-//         )
-
-// }
-
-// export default SinglePic;
