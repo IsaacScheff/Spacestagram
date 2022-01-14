@@ -1,5 +1,6 @@
 {
   "name": "nasa-pic-viewer",
+  "homepage": "https://isaacscheff.github.io/Spacestagram/",
   "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
