@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color:lightgray;
+  overflow-y: auto;
+  height: 1000px;
 }
 
 .App-logo {
@@ -39,4 +42,47 @@
 
 .likeButton {
   background-color: lightgrey;
+}
+
+.nasaImage {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  border-style: solid;
+  background-color: white;
+}
+
+.picture {
+  width:  75%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.Title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: xx-large;
+  font-weight: 1000;
+  text-align: left;
+}
+
+.tagline {
+  font-style: oblique;
+  color: #414141;
+  font-size: medium;
+  text-align: left;
+}
+
+.picTitle {
+  font-weight: 500;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.date {
+  font-style: italic;
+  font-weight: 200;
+}
+
+.morePics {
+  padding: 5px;
+  margin-top: 10px;
 }

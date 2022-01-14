@@ -27,18 +27,18 @@ export function SinglePic (props) {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-        console.log(pic);
         let buttonText = isLiked ? 'Unlike' : 'Like';
+        const buttonColor = isLiked ? 'gray' : 'lightblue';
       return (
-        <figure>
-            <figcaption>{pic.title}</figcaption>
-            <p><time>Taken on: {pic.date}</time></p>
-            <img src={pic.url} alt='Image detailed below'/>
+        <figure className='nasaImage'>
+            <img className='picture' src={pic.url} alt='Image detailed below'/>
+            <figcaption className='picTitle'>{pic.title}</figcaption>
+            <time className='date'>Uploaded: {pic.date}</time>
             <details>
                 <summary>Click here for information</summary>
                 {pic.explanation}
             </details> 
-            <button className="likeButton" onClick={() => setLikeStatus(!isLiked)}> {buttonText} </button>
+            <button className="likeButton" style={{background: buttonColor}}onClick={() => setLikeStatus(!isLiked)}> {buttonText} </button>
         </figure>
       );
     }
