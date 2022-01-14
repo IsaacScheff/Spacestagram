@@ -21,7 +21,8 @@ export function SinglePic (props) {
             setError(error);
           }
         )
-    }, [])
+        setLikeStatus(0);
+    }, [props])
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
