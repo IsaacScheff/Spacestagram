@@ -2,7 +2,7 @@
 
 Deployed: https://isaacscheff.github.io/Spacestagram/
 
-Makes calls to the NASA APOD ( astronomy pic of the day) API and displays the results.
+Makes calls to the NASA APOD ( astronomy photo of the day) API and displays the results.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
