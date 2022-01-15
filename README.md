@@ -1,4 +1,4 @@
-## Shopify Front End coding assesemnt "Spacestagram" 
+## "Spacestagram" 
 
 Deployed: https://isaacscheff.github.io/Spacestagram/
 
