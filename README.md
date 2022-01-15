@@ -1,4 +1,4 @@
-## "Spacestagram" 
+## Spacestagram 
 
 Deployed: https://isaacscheff.github.io/Spacestagram/
 
